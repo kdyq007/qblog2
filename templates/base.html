@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>{%- block title %}Bootstrap 101 Template{% endblock -%}</title>
+
+
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet">
+  {% block style %}
+    {% endblock %}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  {% block head %}
+      <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="branding" href="#">
+                        <img src="http://static.ghostchina.com/image/b/46/4f5566c1f7bc28b3f7ac1fada8abe.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+      <nav class="main-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+{#                    <div class="navbar-header">#}
+{#                        <span class="nav-toggle-button collapse" data-target="main-menu">#}
+{#                            <span class="sr-only"> Toggle Navigation</span>#}
+{#                            <span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>#}
+{#                        </span>#}
+{#                    </div>#}
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="menu">
+                            <li class="nav-current" role="presentation">
+                                <a href="#">首页</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#">论坛</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#">快捷手册</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#">中文文档</a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#">关于</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </nav>
+
+  {% endblock %}
+  {% block body %}
+    <h1>你好，世界！</h1>
+  {% endblock %}
+   {% block tail %}
+  {% endblock %}
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+  {% block script %}
+  {% endblock %}
+  </body>
+</html>
