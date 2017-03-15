@@ -127,6 +127,16 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
+.widget .title:after {
+    content: "";
+    width: 90px;
+    height: 1px;
+    background: #e67e22;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
 .widget .tag-cloud a {
     border: 1px solid #ebebeb;
     padding: 2px 7px;
