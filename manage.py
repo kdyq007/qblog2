@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 # Author:Qi Qi
 
+import models
 from application import app
 from application import db
 from flask_script import Manager
@@ -18,5 +19,5 @@ def create_db():
         db.create_all()
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
